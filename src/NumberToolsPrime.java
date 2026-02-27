@@ -7,26 +7,22 @@
  * Activity Name: Class Exercise 3: Numeric Functions
  */
 
-import java.util.Scanner;
-
-public class NumberToolsPrime {
-  public static void main(String[] args) {
-    Scanner scanner = new Scanner(System.in);
-    while (true) {
-      System.out.print("Please enter an Integer Number to test (or a anything else to exit): ");
-      if (!scanner.hasNextInt()) {
-        System.out.println("Exiting program. See ya!");
-        break;
-      }
-      int number = scanner.nextInt();
-      System.out.println("Is " + number + " an even number? "      + (NumberTools.isEven(number)      ? "Yes." : "No."));
-      System.out.println("Is " + number + " a positive number? "   + (NumberTools.isPositive(number)  ? "Yes." : "No."));
-      System.out.println("Is " + number + " a Fibonacci number? "  + (NumberTools.isFibonacci(number) ? "Yes." : "No."));
-      System.out.println("Is " + number + " a power of two? "      + (NumberTools.isPowerOfTwo(number)? "Yes." : "No."));
-      System.out.println("Is " + number + " a prime number? "      + (NumberTools.isPrime(number)     ? "Yes." : "No."));
-      System.out.println("Is " + number + " a square number? "     + (NumberTools.isSquare(number)    ? "Yes." : "No."));
-      System.out.println();
+void main() {
+  Scanner scanner = new Scanner(System.in);
+  while (true) {
+    IO.print("Please enter an Integer Number to test (or a anything else to exit): ");
+    if (!scanner.hasNextInt()) {
+      IO.println("Exiting program. See ya!");
+      break;
     }
-    scanner.close();
+    int number = scanner.nextInt();
+    IO.println("Is " + number + " an even number? " + (NumberTools.isEven(number) ? "Yes." : "No."));
+    IO.println("Is " + number + " a positive number? " + (NumberTools.isPositive(number) ? "Yes." : "No."));
+    IO.println("Is " + number + " a Fibonacci number? " + (NumberTools.isFibonacci(number) ? "Yes." : "No."));
+    IO.println("Is " + number + " a power of two? " + (NumberTools.isPowerOfTwo(number) ? "Yes." : "No."));
+    IO.println("Is " + number + " a prime number? " + (NumberTools.isPrime(number) ? "Yes." : "No."));
+    IO.println("Is " + number + " a square number? " + (NumberTools.isSquare(number) ? "Yes." : "No."));
+    IO.println();
   }
+  scanner.close();
 }
